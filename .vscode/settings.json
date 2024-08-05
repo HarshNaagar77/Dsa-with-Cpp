@@ -59,6 +59,8 @@
   "C_Cpp.default.compilerPath": "gcc",
   "files.associations": {
     "string_view": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "array": "cpp",
+    "initializer_list": "cpp"
   }
 }
