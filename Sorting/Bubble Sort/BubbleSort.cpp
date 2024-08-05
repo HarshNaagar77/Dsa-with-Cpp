@@ -15,6 +15,7 @@ int main(){
                 arr[j+1] = temp;
             }
         }
+        
     }
 
     for ( int k = 0 ; k < size ; k++){
