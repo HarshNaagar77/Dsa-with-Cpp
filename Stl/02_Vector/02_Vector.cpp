@@ -8,16 +8,25 @@ using namespace std;
 
 int main(){
 
-    vector<int> v(5) ;     // it means vector v is created with size of 5.
+    vector<int> v1 ;            // it means vector v2 is created with default size of 2.
+    vector<int> v2(5 , 1) ;     // it means vector v2 is created with size of 5 and all values are initialised as 1.
 
     // operations on vector
 
-    cout << "Vector size : " << v.size() << endl;           // Size returns total elements in vector
-    cout << "Vector capacity : " << v.capacity() << endl;   // Capacity returns total elements that can be stored in vector
-    v.push_back(34);
-    cout << "Vector size after push : " << v.size() << endl;          
+    cout << "Vector size : " << v2.size() << endl;           // Size returns total elements in vector
+    cout << "Vector capacity : " << v2.capacity() << endl;   // Capacity returns total elements that can be stored in vector
+    v2.push_back(34);
+    cout << "Vector size after push : " << v2.size() << endl;     
 
-    v.pop_back();
-    cout << "Vector size after pop : " << v.size() << endl;           
+    v2.pop_back();
+    cout << "Vector size after pop : " << v2.size() << endl;      
 
+
+    v1.push_back(10);
+    v1.push_back(20);
+    cout << "Vector V1 element at position 1 : "  << v1.at(1)  << endl;    
+
+
+    v2.clear();
+    cout << "Vector size after clear : " << v2.size() << endl;
 }
