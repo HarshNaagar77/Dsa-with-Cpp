@@ -15,5 +15,4 @@ int main(){
     cout << "Array empty or not : " << arr.empty() << endl;
     cout << "Array maximum size : " << arr.max_size() << endl;
     
-
 }

@@ -1,12 +1,13 @@
 // Vector is a dynamic array . 
 // if its storage is full but we are still storing data in it then it DOUBLES its size to store more data.
+// It act as a stack so insertion and deletion is only from back.
 
 
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int main(){
+int main(){  
 
     vector<int> v1 ;            // it means vector v2 is created with default size of 0.
     vector<int> v2(5 , 1) ;     // it means vector v2 is created with size of 5 and all values are initialised as 1.
