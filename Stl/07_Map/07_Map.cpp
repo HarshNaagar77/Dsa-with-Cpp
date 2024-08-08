@@ -14,7 +14,7 @@ int main(){
 
     m.insert({1 , "harsh"});
     m.insert({2 , "naagar"});
-    m.insert({3 , "hello"});            // 3 is key and  hello is string
+    m.insert({3 , "hello"});            // 3 is key wand  hello is string
 
     for ( auto i : m){
         cout << i.first << " " << i.second << endl;             // i.first prints key and i.second print value
