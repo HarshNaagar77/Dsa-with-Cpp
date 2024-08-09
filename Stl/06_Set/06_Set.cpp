@@ -13,6 +13,7 @@ int main(){
     s.insert(32);
     s.insert(32);
     s.insert(64);
+    
     s.insert(32);
     s.insert(33);
     s.insert(43);
