@@ -7,10 +7,12 @@ int main(){
     int *p = arr;
 
     cout << *p << endl;
-    cout << *(p+1) << endl;
+    cout << *(p+1) << endl;  
     cout << *(p+2) << endl;
     cout << *p + 1 << endl;
 
     cout << p << endl;
     cout << p+2 << endl;
+    cout << *(p + 3) ; 
+    cout << (arr+3);
 }
