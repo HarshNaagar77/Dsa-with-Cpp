@@ -15,4 +15,5 @@ int main(){
     cout << p+2 << endl;
     cout << *(p + 3) ; 
     cout << (arr+3);
+    
 }
