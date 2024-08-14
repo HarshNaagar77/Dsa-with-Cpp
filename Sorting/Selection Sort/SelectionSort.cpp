@@ -16,7 +16,7 @@ int main(){
     for (int i = 0; i < arrSize - 1; i++){
         int minIndex = i;
 
-
+ 
         for (int j = i + 1; j < arrSize; j++){
             if (arr[j] < arr[minIndex]){
             int temp = arr[j];
