@@ -16,14 +16,14 @@ int main(){
         ptr[i] = new int[n2];
     }
 
-
-
+ 
+    
     // initialize 2d array
-    for(int i = 1 ; i <= n ; i++){
+    for(int i = 1 ; i <= n ; i++){ 
         for(int j = 1 ; j <= n2 ; j++){
             cout << "Enter element at position [" << i << "][" << j << "] ";
             cin >> ptr[i][j];
-        }
+        } 
     }
 
 
