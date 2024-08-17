@@ -12,7 +12,7 @@ int count(int n){
 
     count(n-1);            // recursive relation
     cout << n << endl;
-    return 0;
+    return 0; 
 }
 
 int main(){
