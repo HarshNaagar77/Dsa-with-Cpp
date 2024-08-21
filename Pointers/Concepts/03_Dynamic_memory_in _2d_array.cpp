@@ -1,3 +1,7 @@
+// For 2d array 
+// first we have to create 1 double pointer which points to array containing pointer on each index .
+// then using a for loop we have to create new heap on every index of array
+
 #include <iostream>
 using namespace std ;
 
@@ -35,5 +39,6 @@ int main(){
         }
         cout << endl ;
     }
+
 
 }
