@@ -15,7 +15,7 @@ int isSorted(int *arr , int size){
        return ans;
 }
 }
-
+ 
 int main(){
 
     int arr[5] = {2,4,5,9,11};
