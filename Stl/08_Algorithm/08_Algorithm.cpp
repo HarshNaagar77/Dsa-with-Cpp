@@ -20,8 +20,8 @@ int main(){
     }
     cout << endl ;
 
-    // binary_search function is used to search the element in the vector
     cout << "Index of 64 :" << binary_search(v.begin() , v.end() , 64) << endl ;
+    // binary_search function is used to search the element in the vector
 
     // max and min 
     int maxIt = *max_element(v.begin(), v.end());
