@@ -13,7 +13,7 @@ int main(){
     v.push_back(3);    
     v.push_back(64);
 
-    // sort function is used to sort the vector
+    // sort function is used to sort the vector   
     sort(v.begin() , v.end()) ;
     for ( auto i : v ){
         cout << i << ' ' ;
