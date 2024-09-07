@@ -15,7 +15,7 @@ public:
         int start = 0;
         int end = row * col - 1;
 
-        while (start <= end) {
+        while (start <= end) {  
             int mid = start + (end - start) / 2;
             int element = matrix[mid / col][mid % col];
 
@@ -23,7 +23,7 @@ public:
                 return {mid / col, mid % col};
             } else if (element < target) {
                 start = mid + 1;
-            } else {
+            } else { 
                 end = mid - 1;
             }
         }
