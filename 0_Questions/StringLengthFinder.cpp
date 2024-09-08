@@ -12,7 +12,8 @@ int main() {
         count++;
     }
 
-    cout << "Length of string is: " << count << endl;
+    cout << "Length of string is -> " << count << endl;
+
 
     return 0;
-}  
+} 
