@@ -30,6 +30,6 @@ int main() {
 
     int ans = gcd(a, b);
 
-    cout << "GCD of the given numbers is: " << ans << endl;
+    cout << "GCD of given numbers is: " << ans << endl;
     return 0;
 }
