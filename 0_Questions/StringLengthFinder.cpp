@@ -13,7 +13,6 @@ int main() {
     }
 
     cout << "Length of string is -> " << count << endl;
-
-
+    
     return 0;
 } 
