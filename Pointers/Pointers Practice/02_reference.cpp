@@ -8,11 +8,11 @@ int main(){
 
     int a = num;
     a++ ;
-    cout << a << endl;              // value value of a is changed but num remain same 
+    cout << a << endl;              // value of a is changed but num remain same 
     cout << num << endl;            
- 
+  
 
     (*ptr)++;
     cout << *ptr << endl;           // value of both ptr and num gets changed 
-    cout << num << endl;            
-}
+    cout << num << endl;                
+} 

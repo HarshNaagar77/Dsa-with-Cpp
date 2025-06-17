@@ -25,20 +25,21 @@ public:
                 start = mid + 1;
             } else { 
                 end = mid - 1;
-            }
+            }   
         }
 
         return {-1, -1};
-    }
+    }   
 };
 
+ 
 int main() {
     vector<vector<int>> matrix = {
         {1, 3, 5, 7},
         {10, 11, 16, 20},
         {23, 30, 34, 60}
     };
-    int target = 34;
+    int target = 34;    
 
     Solution s;
     auto result = s.searchMatrix(matrix, target);
