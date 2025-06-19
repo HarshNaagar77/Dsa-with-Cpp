@@ -6,6 +6,7 @@ int palindrome(string s){
     int right = s.length() - 1;
 
     while(left < right){
+        
         while(left < right && !isalnum(s[left])){
             left++;
         }
