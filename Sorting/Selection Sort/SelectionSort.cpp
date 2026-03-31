@@ -27,11 +27,7 @@ int main(){
 
     }
     
-    cout << "Sorted array: ";
-    for (int k = 0; k < arrSize; k++) {
-        cout << arr[k] << " ";
-    }
-    cout << endl;
+   
 
     return 0;
 }
