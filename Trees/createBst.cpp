@@ -73,6 +73,15 @@ void levelorder(Node* root){
     }
 }
 
+void display(Node* root){
+    if( root == NULL){
+        return;
+    }
+    cout << root->val << " ";
+    display(root->left);
+    display(root->right);
+}
+
 int main(){
     vector<int> v = {1,2,-1,-1,3,4,-1,-1,5,-1,-1};
     Node* root =  buildTree(v);
@@ -92,3 +101,4 @@ int main(){
     levelorder(root);
 
 }
+
