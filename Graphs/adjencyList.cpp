@@ -6,8 +6,8 @@
 using namespace std;
  
 class Graph{
-    unordered_map<int, list<int>> adjList;
     public:
+    unordered_map<int, list<int>> adjList;
     void addEdge(int u, int v, bool direction){
         // direction = 0 -> undirected
         // direction = 1 -> directed
@@ -26,6 +26,7 @@ class Graph{
             cout << endl;
         }
     }
+
     void bfs(){
         queue<int> q;
         vector<bool> visited(adjList.size(), false);
@@ -45,16 +46,31 @@ class Graph{
             }
         }
     }
+
+    void dfs(int u , vector<bool> &visited){
+        cout << u << " ";
+        visited[u] = true;
+
+        for( auto i : adjList[u]){
+            if(visited[i] == false){
+                dfs(i, visited);
+            }
+        }
+        
+    }
 };
 
 int main(){
     Graph g;
     g.addEdge(0, 1, 0);
     g.addEdge(1, 2, 0);
-    g.addEdge(2, 3, 0);
-    g.addEdge(3, 4, 0);
-    g.addEdge(4, 5, 0);
+    g.addEdge(1, 3, 0);
+    g.addEdge(2, 4, 0);
     g.printGraph();
     g.bfs();
+    
+    cout << endl;
+    vector<bool> visited(g.adjList.size(), false);
+    g.dfs(0, visited);
 
 }
