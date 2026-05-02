@@ -58,6 +58,20 @@ class Graph{
         }
         
     }
+
+    void detectCycle(int u , vector<bool> &visited , int parent){
+        visited[u] = true;
+
+        for( auto i : adjList[u]){
+            if(visited[i] == true && i != parent){
+                cout << "Cycle detected at node " << u << endl;
+                return;
+            }
+            if(visited[i] == false){
+                detectCycle(i, visited, u);
+            }
+        }
+    }
 };
 
 int main(){
@@ -72,5 +86,8 @@ int main(){
     cout << endl;
     vector<bool> visited(g.adjList.size(), false);
     g.dfs(0, visited);
+
+    cout << endl;
+    g.detectCycle(0, visited, -1);
 
 }
