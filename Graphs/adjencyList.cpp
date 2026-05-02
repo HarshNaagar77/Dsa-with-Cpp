@@ -1,6 +1,7 @@
 #include <iostream>
 #include <unordered_map>
 #include <list>
+#include <queue>
 
 using namespace std;
  
@@ -25,6 +26,25 @@ class Graph{
             cout << endl;
         }
     }
+    void bfs(){
+        queue<int> q;
+        vector<bool> visited(adjList.size(), false);
+        q.push(0);
+        visited[0] = true;
+
+        while( q.size() > 0){
+            int u = q.front();
+            q.pop();
+            cout << u << " ";
+
+            for(auto i : adjList[u]){
+                if(visited[i] == false){
+                    q.push(i);
+                    visited[i] = true;
+                }
+            }
+        }
+    }
 };
 
 int main(){
@@ -35,5 +55,6 @@ int main(){
     g.addEdge(3, 4, 0);
     g.addEdge(4, 5, 0);
     g.printGraph();
+    g.bfs();
 
 }
