@@ -72,22 +72,52 @@ class Graph{
             }
         }
     }
+
+    bool detectCycleDirected( int u , vector<bool> &vis , vector<bool> &rec){
+        vis[u] = true;
+        rec[u] = true;
+
+        for( auto i : adjList[u]){
+            if(vis[i] == false){
+                if(detectCycleDirected(i , vis , rec)){
+                    return true;
+                }
+            }
+            else if(rec[i] == true){
+                return true;
+            }
+        }
+        rec[u] = false;
+        return false;
+    }
 };
 
 int main(){
     Graph g;
-    g.addEdge(0, 1, 0);
-    g.addEdge(1, 2, 0);
-    g.addEdge(1, 3, 0);
-    g.addEdge(2, 4, 0);
+    g.addEdge(0, 1, 1);
+    g.addEdge(1, 2, 1);
+    g.addEdge(2, 3, 1);
+    g.addEdge(3, 4, 1);
+    g.addEdge(4 , 1 ,1);
     g.printGraph();
     g.bfs();
     
     cout << endl;
     vector<bool> visited(g.adjList.size(), false);
-    g.dfs(0, visited);
+    // g.dfs(0, visited);
 
     cout << endl;
-    g.detectCycle(0, visited, -1);
+    // g.detectCycle(0, visited, -1);
+
+    cout << endl;
+    
+    vector<bool> rec(g.adjList.size() , false);
+    if(g.detectCycleDirected(0 , visited , rec)){
+        cout << "Cycle detected" << endl;
+    }
+    else{
+        cout << "No cycle" ;
+    }
+
 
 }
